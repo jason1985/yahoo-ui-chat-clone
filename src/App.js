@@ -1,18 +1,7 @@
 import styled from 'styled-components'
 import VoiceControls from './components/VoiceControls'
 import ChatInput from './components/ChatInput'
-import BackgroundImg from './images/98.png';
-
-
-// chatroom
-// -titlebar
-// --icon, roomname, & close controls
-// --file controls
-// -ChatDisplay
-// --ChatText
-// --UserList
-// -VoiceControls
-// -TextControls
+import BackgroundImg from './images/98.png'
 
 const AppWrapper = styled.div`
   height: 100vh;
@@ -21,7 +10,7 @@ const AppWrapper = styled.div`
   align-items: center;
   background-image: url(${BackgroundImg});
   background-size: cover;
-  `
+`
 
 const Chatroom = styled.div`
   border: solid 4px #c0bfc0;
@@ -73,7 +62,7 @@ const UserList = styled.div`
   background-color: white;
   border: solid 2px black;
 `
-const Wrap = styled.div`
+const ChatroomWrapper = styled.div`
   border: solid 1px black;
   overflow: hidden;
 `
@@ -91,7 +80,7 @@ const FileControlsText = () => {
 function App() {
   return (
     <AppWrapper>
-      <Wrap>
+      <ChatroomWrapper>
         <Chatroom>
           <Titlebar>Jason's Room:1 -- Chat</Titlebar>
           <FileControlsText />
@@ -102,7 +91,7 @@ function App() {
           <VoiceControls />
           <ChatInput />
         </Chatroom>
-      </Wrap>
+      </ChatroomWrapper>
     </AppWrapper>
   )
 }
